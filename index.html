@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="menu">☰</button>  
+  </nav>
+
+  <header class="hero">
+    <h1>Hello, I'm Mohit</h1>
+    <p>Video & photo editor — portfolio sample</p>
+  </header>
+
+  <section class="projects">
+    <article class="card">
+      <h3>Project 1</h3>
+      <p>Short description...</p>
+    </article>
+    <!-- add more -->
+  </section>
+
+  <script>
+    // Simple hamburger toggle
+    const btn = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    btn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>
