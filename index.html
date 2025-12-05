@@ -1,20 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Mohit Dangi — video & photo editor. Portfolio with Home, About, Contact pages.">
+
+  <!-- PRELOAD CSS -->
+  <link rel="preload" href="styles/main.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles/main.css">
 </head>
+
+</head>
+
 <body>
   <nav class="nav">
     <div class="logo">Portfolio</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="mohitdangi353@gmail.com">Email me</a></li>
     </ul>
     <button class="hamburger" aria-label="menu">☰</button>  
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="logo">Portfolio</div>
+  <ul class="nav-links" id="navlist">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" aria-controls="navlist" aria-expanded="false" aria-label="Open menu">☰</button>
+</nav>
+
   </nav>
 
   <header class="hero">
@@ -23,18 +44,27 @@
   </header>
 
   <section class="projects">
-    <article class="card">
-      <h3>Project 1</h3>
-      <p>Short description...</p>
+   <article class="card">
+  <img src="images/project1.jpg" alt="Project 1 preview" loading="lazy" width="800" height="450">
+  <h3>Project 1</h3>
+  <p>Short description...</p>
+</article>
+
     </article>
     <!-- add more -->
   </section>
 
   <script>
     // Simple hamburger toggle
-    const btn = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    btn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    
+const btn = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+btn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+
   </script>
 </body>
 </html>
